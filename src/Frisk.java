@@ -14,13 +14,14 @@ public class Frisk {
     private String fingerprint;
     private int duration;
 
-    public static void main(String args[])throws FileNotFoundException{
-        try{
-            System.out.println("Reading File");
-            Runtime runTime = Runtime.getRuntime();
-            Process process = runTime.exec("cmd /c fpcalc.exe Track09.mp3 > output.txt");
+    public static void main(String args[]) throws FileNotFoundException, InterruptedException {
 
-            System.out.println("Capture Fingerprint");
+        try{
+            String command = "cmd /c fpcalc.exe Track01.mp3 > output.txt";
+            Runtime runTime = Runtime.getRuntime();
+
+            Process process = runTime.exec(command);
+            process.waitFor();
             process.destroy();
 
         }catch (IOException e){
@@ -50,14 +51,24 @@ public class Frisk {
                 count++;
             }
 
-
             CreateURL urlObject = new CreateURL();
-            String url = urlObject.createURL(duration, fingerprint);
+            String url = urlObject.createURL(1, duration, fingerprint);
 
-            System.out.println(url);
-            System.out.println("Sending request for information");
+            /*  Send the GET request to the Server, and read the ID's from the response */
+            String trackAcousticID = AcoustID.getID(url);
+
+            /*  GET request to the page containing the data */
+            url = urlObject.createURL(2, 0, trackAcousticID);
+            TrackInfo info = new TrackInfo().getResults(url);
+
+            System.out.println("Title: " + info.getTrackName());
+            System.out.println("Artist: " + info.getTrackArtist());
+            System.out.println("Length: " + info.getTrackLength());
+
         }catch (Exception e){
             System.err.println("The process failed. The program will now exit.");
+            System.out.println("Please check your internet connection or try later.");
+            e.printStackTrace();
             System.exit(-1);
         }
     }

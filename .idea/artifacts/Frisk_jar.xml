@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Frisk:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Frisk_jar</output-path>
+    <root id="archive" name="Frisk.jar">
+      <element id="module-output" name="Frisk" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/libs/jsoup.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

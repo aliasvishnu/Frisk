@@ -1,7 +1,5 @@
 FRISK
 =====
-STILL INCOMPLETE.
-
 Software that will analyse a song, rename and fill missing metadata.
 
 This was a project in IntelliJ. Please import it inside IntelliJ to try.

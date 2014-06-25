@@ -1,4 +1,4 @@
-FRISK
+Frisk
 =====
 Software that will analyse a song, rename and fill missing metadata.
 
@@ -8,7 +8,7 @@ The song must be present in the project folder.
 It will give the Title, Artist and Length of the track.
 It doesn't fill the metadata just yet.
 
-HOW IT WORKS
+How it works
 ============
 
 fpcalc.exe is code written by  Lukáš Lalinský. It can be used to export the fingerprint of the 
@@ -23,7 +23,7 @@ The song 'id' is taken from the response. This is used to send another request.
 The response contains the TrackInfo, which is then extracted and displayed.
 
 
-DRAWBACKS
+Drawbacks
 =========
 
 The software's is limited to MusicBrainz database. 

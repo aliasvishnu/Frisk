@@ -51,23 +51,34 @@ public class Frisk {
                 count++;
             }
 
+            int failure = 0;
             CreateURL urlObject = new CreateURL();
             String url = urlObject.createURL(1, duration, fingerprint);
 
             /*  Send the GET request to the Server, and read the ID's from the response */
             String trackAcousticID = AcoustID.getID(url);
+            if(trackAcousticID.equals("")) failure = 1;
 
             /*  GET request to the page containing the data */
-            url = urlObject.createURL(2, 0, trackAcousticID);
-            TrackInfo info = new TrackInfo().getResults(url);
+            TrackInfo info = null;
+            if(failure == 0){
+                url = urlObject.createURL(2, 0, trackAcousticID);
+                info = new TrackInfo().getResults(url);
+            }
 
             scanner.close();
             PrintStream fw = new PrintStream("output.txt");
+
+            if(failure == 1){
+                fw.println("Sorry, that song is not in our database.");
+                System.exit(-1);
+            }
 
             String track = String.format("Title: " + info.getTrackName());
             String artist = String.format("Artist: " + info.getTrackArtist());
             String length = String.format("Length: " + info.getTrackLength());
 
+//
 
             fw.println(track);
             fw.println(artist);

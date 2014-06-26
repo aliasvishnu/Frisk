@@ -17,7 +17,7 @@ public class Frisk {
     public static void main(String args[]) throws FileNotFoundException, InterruptedException {
 
         try{
-            String command = "cmd /c fpcalc.exe Track01.mp3 > output.txt";
+            String command = "cmd /c fpcalc.exe song.mp3 > output.txt";
             Runtime runTime = Runtime.getRuntime();
 
             Process process = runTime.exec(command);
@@ -61,15 +61,27 @@ public class Frisk {
             url = urlObject.createURL(2, 0, trackAcousticID);
             TrackInfo info = new TrackInfo().getResults(url);
 
-            System.out.println("Title: " + info.getTrackName());
-            System.out.println("Artist: " + info.getTrackArtist());
-            System.out.println("Length: " + info.getTrackLength());
+            scanner.close();
+            PrintStream fw = new PrintStream("output.txt");
+
+            String track = String.format("Title: " + info.getTrackName());
+            String artist = String.format("Artist: " + info.getTrackArtist());
+            String length = String.format("Length: " + info.getTrackLength());
+
+
+            fw.println(track);
+            fw.println(artist);
+            fw.println(length);
+
+            fw.close();
 
         }catch (Exception e){
             System.err.println("The process failed. The program will now exit.");
             System.out.println("Please check your internet connection or try later.");
             e.printStackTrace();
             System.exit(-1);
+        }finally {
+            scanner.close();
         }
     }
 }

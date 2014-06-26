@@ -1,5 +1,6 @@
 Frisk
 =====
+(Windows Only)
 Software that will analyse a song, rename and fill missing metadata.
 
 Frisk assumes that the song name is "song.mp3".
@@ -11,7 +12,7 @@ How to use
 ==========
 Take any song you want to find info about. Place it in the project directory. 
 Rename it as song.mp3. Even if it is of another audio format.
-
+Run Frisk.jar
 
 Drawbacks
 =========
@@ -19,13 +20,10 @@ Drawbacks
 The software's is limited to MusicBrainz database. 
 Fetches only artist and track name, as of now.
 
-
-
-
-
-
-
-
+What to expect
+==============
+My immediate goal is to have traverse through all songs in a particular folder. 
+And burn the new info into the songs.
 
 
 

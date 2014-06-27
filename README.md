@@ -5,8 +5,8 @@ Software that will analyse a song, rename and fill missing metadata.
 
 Frisk assumes that the song name is "song.mp3".
 The song must be present in the project folder.
-It will give the Title, Artist and Length of the track in output.txt.
-It doesn't fill the metadata just yet, just writes it to output.txt.
+It will give the Title, Artist and Length of the track in result.txt.
+It doesn't fill the metadata just yet.
 
 How to use
 ==========
@@ -22,7 +22,7 @@ Fetches only artist and track name, as of now.
 
 What to expect
 ==============
-My immediate goal is to have traverse through all songs in a particular folder. 
+My immediate goal is to have it traverse through all songs in a particular folder. 
 And burn the new info into the songs.
 
 

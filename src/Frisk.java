@@ -8,6 +8,8 @@
 
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class Frisk {
@@ -17,7 +19,7 @@ public class Frisk {
     public static void main(String args[]) throws FileNotFoundException, InterruptedException {
 
         try{
-            String command = "cmd /c fpcalc.exe song.mp3 > output.txt";
+            String command = "cmd /c fpcalc.exe song.mp3 > temp/output.txt";
             Runtime runTime = Runtime.getRuntime();
 
             Process process = runTime.exec(command);
@@ -33,7 +35,7 @@ public class Frisk {
     }
 
     public void getData(Frisk obj)throws FileNotFoundException{
-        File file = new File("output.txt");
+        File file = new File("temp/output.txt");
         FileReader fr = new FileReader(file);
         Scanner scanner = new Scanner(fr);
         scanner.useDelimiter("%n");
@@ -54,9 +56,12 @@ public class Frisk {
             int failure = 0;
             CreateURL urlObject = new CreateURL();
             String url = urlObject.createURL(1, duration, fingerprint);
+           // System.out.println(fingerprint);
+
 
             /*  Send the GET request to the Server, and read the ID's from the response */
             String trackAcousticID = AcoustID.getID(url);
+           // System.out.println(trackAcousticID);
             if(trackAcousticID.equals("")) failure = 1;
 
             /*  GET request to the page containing the data */
@@ -67,7 +72,8 @@ public class Frisk {
             }
 
             scanner.close();
-            PrintStream fw = new PrintStream("output.txt");
+            Files.delete(Paths.get("temp/output.txt"));
+            PrintStream fw = new PrintStream("result.txt");
 
             if(failure == 1){
                 fw.println("Sorry, that song is not in our database.");
@@ -78,7 +84,9 @@ public class Frisk {
             String artist = String.format("Artist: " + info.getTrackArtist());
             String length = String.format("Length: " + info.getTrackLength());
 
-//
+            System.out.println(track);
+            System.out.println(artist);
+            System.out.println(length);
 
             fw.println(track);
             fw.println(artist);

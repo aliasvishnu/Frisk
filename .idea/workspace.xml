@@ -6,11 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd431e72-7115-4a90-be42-496ef9169285" name="Default" comment="" />
+    <list default="true" id="fd431e72-7115-4a90-be42-496ef9169285" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Frisk.jar" afterPath="$PROJECT_DIR$/Frisk.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Frisk.java" afterPath="$PROJECT_DIR$/src/Frisk.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
     <ignored path="Frisk.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Frisk.java" changelist="fd431e72-7115-4a90-be42-496ef9169285" time="1403799282947" ignored="false" />
-    <file path="/Dummy.txt" changelist="fd431e72-7115-4a90-be42-496ef9169285" time="1403798844160" ignored="false" />
+    <file path="/Frisk.java" changelist="fd431e72-7115-4a90-be42-496ef9169285" time="1403847153826" ignored="false" />
+    <file path="/Dummy.txt" changelist="fd431e72-7115-4a90-be42-496ef9169285" time="1403846752096" ignored="false" />
     <file path="/CreateURL.java" changelist="fd431e72-7115-4a90-be42-496ef9169285" time="1403625421384" ignored="false" />
     <file path="/fragment.java" changelist="fd431e72-7115-4a90-be42-496ef9169285" time="1403612095330" ignored="false" />
     <file path="/getAcoustID.java" changelist="fd431e72-7115-4a90-be42-496ef9169285" time="1403625191143" ignored="false" />
@@ -29,7 +33,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -66,6 +69,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -78,7 +82,7 @@
       <file leaf-file-name="Frisk.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Frisk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="49" selection-start="2145" selection-end="2145" vertical-scroll-proportion="0.530572">
+            <state line="74" column="41" selection-start="2302" selection-end="2302" vertical-scroll-proportion="0.77120316">
               <folding />
             </state>
           </provider>
@@ -172,6 +176,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -192,8 +198,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,12 +212,12 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -327,8 +331,8 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -415,6 +419,13 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/TrackInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="80" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TrackInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="80" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
@@ -513,7 +524,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Frisk.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="49" selection-start="2145" selection-end="2145" vertical-scroll-proportion="0.530572">
+        <state line="74" column="41" selection-start="2302" selection-end="2302" vertical-scroll-proportion="0.77120316">
           <folding />
         </state>
       </provider>

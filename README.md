@@ -1,5 +1,6 @@
 Frisk
 =====
+(Windows Only)
 Software that will analyse a song, rename and fill missing metadata.
 
 Frisk assumes that the song name is "song.mp3".
